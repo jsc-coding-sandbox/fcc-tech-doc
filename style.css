@@ -1,0 +1,62 @@
+body {
+  background-color: #F0F0F0;
+}
+
+#navbar {
+  background-color: #E9E9E9;
+  position: fixed;
+  min-width: 200px;
+  top: 0px;
+  left: 0px;
+  width: 250px;
+  height: 100%;
+  border-right: solid;
+  border-color: #DDDDDD;
+  display: flex;
+  flex-direction: column;
+
+}
+
+#navbar a {
+  padding: 4px;
+  border-top: solid;
+  border-color: #DDDDDD;
+  font-size: 1.5em;
+}
+#navbar a:hover {
+  padding-left: 10px;
+}
+
+#main-doc {
+  position: absolute;
+  margin-left: 250px;
+  padding: 20px;
+}
+
+#main-doc p {
+  /* These two not required apparently */
+  position: relative;
+  width: 100%;
+}
+
+#main-doc code {
+  position: relative;
+  display: block;
+  background-color: #222222;
+  color: white;
+  width: 100%; /* Trying to get it to stretch across without going into the nav bar :/ */
+  margin: 10px;
+  padding: 0.5em;
+  border: 5px solid #DDDDDD;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 400px) {
+  #navbar {
+    display: none;
+  }
+
+  #main-doc {
+    margin-left: 0px;
+  }
+}
