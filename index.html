@@ -14,90 +14,90 @@
 
     <nav id="navbar">
       <header><h1>Linux Commands</h1></header>
-      <a class="nav-link" href="#Section_1">Section 1</a>
-      <a class="nav-link" href="#Section_2">Section 2</a>
-      <a class="nav-link" href="#Section_3">Section 3</a>
-      <a class="nav-link" href="#Section_4">Section 4</a>
-      <a class="nav-link" href="#Section_5">Section 5</a>
+      <a class="nav-link" href="#Tar">tar</a>
+      <a class="nav-link" href="#Xclip">xclip</a>
+      <a class="nav-link" href="#Cat">cat</a>
+      <a class="nav-link" href="#Wget">wget</a>
+      <a class="nav-link" href="#Mount">mount</a>
     </nav>
 
     <main id="main-doc">
-      <section class="main-section" id="Section_1">
-        <header><h1>Section 1</h1></header>
+      <section class="main-section" id="Tar">
+        <header><h1>tar</h1></header>
         <article>
           <p>
-            This is paragraph 1
+            Used to archive files. Can also be used to compress using a compression algorithm like GZip or 7zip, but does not do this by default.
             <ul>
-              <li>List item 1</li>
+              <li><a href="https://man.archlinux.org/man/core/tar/tar.1.en" alt="Tar manual">https://man.archlinux.org/man/core/tar/tar.1.en</a></li>
             </ul>
           </p>
           <p>
-            This is paragraph 2 
-            <code>Code 1</code>
+            Here is an example of the tar command being used to archive and compress all JPG images from the current directory into a tar.gz file: 
+            <code>tar -czf archive.tar.gz ./*.jpg</code>
           </p>
         </article>
       </section>
 
-      <section class="main-section" id="Section_2">
-        <header><h1>Section 2</h1></header>
+      <section class="main-section" id="Xclip">
+        <header><h1>xclip</h1></header>
         <article>
           <p>
-            This is paragraph 3 
+            Allows us to move data into X selection (the clipboard on systems using an implementation of the X Window System).
             <ul>
-              <li>List item 2</li>
+              <li><a href="https://man.archlinux.org/man/xclip.1" alt="Xclip manual">https://man.archlinux.org/man/xclip.1</a></li>
             </ul>
           </p>
           <p>
-            This is paragraph 4 
-            <code>Code 2</code>
+            Here is an example of using xclip to put the contents of file "requirements.txt" into the clipboard: 
+            <code>cat requirements.txt | xclip -selection clipboard</code>
           </p>
         </article>
       </section>
 
-      <section class="main-section" id="Section_3">
-        <header><h1>Section 3</h1></header>
+      <section class="main-section" id="Cat">
+        <header><h1>cat</h1></header>
         <article>
           <p>
-            This is paragraph 5
+            Prints the contents of a file to stdout.
             <ul>
-              <li>List item 3</li>
+              <li><a href="https://man.archlinux.org/man/cat.1" alt="Cat manual">https://man.archlinux.org/man/cat.1</a></li>
             </ul>
           </p>
           <p>
-            This is paragraph 6 
-            <code>Code 3</code>
+            Here's an example of using cat to print the file "main.cpp" with line numbers:
+            <code>cat -n main.cpp</code>
           </p>
         </article>
       </section>
 
-      <section class="main-section" id="Section_4">
-        <header><h1>Section 4</h1></header>
+      <section class="main-section" id="Wget">
+        <header><h1>wget</h1></header>
         <article>
           <p>
-            This is paragraph 7
+            Used to download pages from the internet.
             <ul>
-              <li>List item 4</li>
+              <li><a href="https://man.archlinux.org/man/cat.1" alt="Wget manual">https://man.archlinux.org/man/cat.1</a></li>
             </ul>
           </p>
           <p>
-            This is paragraph 8 
-            <code>Code 4</code>
+            Here is an example of using wget to download the web page "companysite.com/secrets.html", using the DNS server "9.9.9.9" (made up IP btw) instead of the default:
+            <code>wget --dns-servers=9.9.9.9 http://companysite.com/secrets.html</code>
           </p>
         </article>
       </section>
 
-      <section class="main-section" id="Section_5">
-        <header><h1>Section 5</h1></header>
+      <section class="main-section" id="Mount">
+        <header><h1>mount</h1></header>
         <article>
           <p>
-            This is paragraph 9
+            Mounts a filesystem so that it can be explored in the host OS. Used to "connect" an internal drive which isn't part of the OS (i.e. your Windows dual boot), an external drive, a USB stick, or another storage device.
             <ul>
-              <li>List item 5</li>
+              <li>https://man.archlinux.org/man/mount.8</li>
             </ul>
           </p>
           <p>
-            This is paragraph 10 
-            <code>Code 5</code>
+            Here's an example of using mount to attach the drive & partition "/dev/sdc1" to the directory "/run/mount/externalhdd" (note that the directory must exist first!):
+            <code>mount /dev/sdc1 /run/mount/externalhdd</code>
           </p>
         </article>
       </section>

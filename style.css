@@ -34,9 +34,6 @@ body {
 }
 
 #main-doc p {
-  /* These two not required apparently */
-  position: relative;
-  width: 100%;
 }
 
 #main-doc code {
@@ -44,11 +41,15 @@ body {
   display: block;
   background-color: #222222;
   color: white;
-  width: 100%; /* Trying to get it to stretch across without going into the nav bar :/ */
   margin: 10px;
   padding: 0.5em;
   border: 5px solid #DDDDDD;
   border-radius: 5px;
+}
+
+.main-section article {
+  max-width: 90vw;
+  min-width: 100px;
 }
 
 @media only screen and (max-width: 400px) {
